@@ -8,6 +8,51 @@
     <title>Document</title>
   </head>
   <body>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <div class="bg-gradient-to-r from-purple-300 to-blue-200">
+      <div
+        class="w-9/12 m-auto py-16 min-h-screen flex items-center justify-center"
+      >
+        <div class="bg-white shadow overflow-hidden sm:rounded-lg pb-8">
+          <div class="border-t border-gray-200 text-center pt-8">
+            <h1 class="text-6xl font-bold text-purple-400">
+              Time span calculator
+            </h1>
+            <p class="text-xl py-8 px-12 font-medium text-gray-500">
+              Calculates for you how many days, hours, minutes or seconds fits
+              into selected time period
+            </p>
+
+            <form>
+              <div class="grid grid-cols-1 my-5 mx-7">
+                <label
+                  class="uppercase text-left md:text-sm text-xs text-gray-900 text-light font-semibold"
+                  >Start Date
+                  <input
+                    class="w-1/2 py-2 px-3 text-gray-500 rounded-lg border-2 border-purple-300 mx-5 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    type="date"
+                  />
+                </label>
+              </div>
+              <div class="grid grid-cols-1 my-5 mx-7">
+                <label
+                  class="uppercase text-left md:text-sm text-xs text-gray-900 text-light font-semibold"
+                  >End Date
+                  <input
+                    class="w-1/2 py-2 px-3 mx-9 mt-1 text-gray-500 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    type="date"
+                  />
+                </label>
+              </div>
+              <button
+                class="bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold px-6 py-3 rounded-md mr-6"
+              >
+                CALCULATE
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js" type="module"></script>
   </body>
 </html>

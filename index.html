@@ -22,145 +22,155 @@
               selected time period
             </p>
           </div>
-          <form>
-            <div class="grid grid-cols-4 grid-rows-6">
-              <div
-                class="col-start-1 col-end-4 flex flex-nowrap justify-between"
+          <form class="grid grid-cols-4 grid-rows-6 mx-8 gap-y-4">
+            <!-- LABELS -->
+            <div
+              class="col-start-1 col-span-1 row-start-1 row-span-1 flex items-center"
+            >
+              <label
+                for="start-date"
+                class="uppercase md:text-sm text-xs text-gray-700 font-semibold"
               >
-                <label
-                  for="start-date"
-                  class="uppercase text-left md:text-sm text-xs text-gray-900 text-light font-semibold"
-                >
-                  Start Date
-                </label>
-                <input
-                  id="start-date"
-                  class="py-2 px-3 text-gray-500 rounded-lg border-2 border-purple-300 mx-5 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                  type="date"
-                />
-              </div>
-              <div class="col-start-2 col-end-4 flex justify-between">
-                <button
-                  class="text-purple-500 bg-transparent border border-solid border-purple-500 hover:bg-purple-500 hover:text-white active:bg-purple-600 font-bold uppercase text-xs px-4 py-2 rounded-full outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                  type="button"
-                >
-                  Week
-                </button>
-                <button
-                  class="text-purple-500 bg-transparent border border-solid border-purple-500 hover:bg-purple-500 hover:text-white active:bg-purple-600 font-bold uppercase text-xs px-4 py-2 rounded-full outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                  type="button"
-                >
-                  Month
-                </button>
-              </div>
+                Start Date
+              </label>
+            </div>
 
-              <div
-                class="col-start-1 col-end-4 flex flex-nowrap justify-between"
+            <div
+              class="col-start-1 col-span-1 row-start-3 row-span-1 flex items-center"
+            >
+              <label
+                for="end-date"
+                class="uppercase text-left md:text-sm text-xs text-gray-700 font-semibold"
               >
-                <label
-                  for="end-date"
-                  class="uppercase text-left md:text-sm text-xs text-gray-900 text-light font-semibold"
-                >
-                  End Date
-                </label>
-                <input
-                  id="end-date"
-                  class="py-2 px-3 mx-9 mt-1 text-gray-500 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                  type="date"
-                />
-              </div>
+                End Date
+              </label>
+            </div>
 
-              <div
-                class="col-start-1 col-end-4 flex flex-nowrap justify-between"
+            <div
+              class="col-start-1 col-span-1 row-start-4 row-span-1 flex items-center"
+            >
+              <label
+                for="filter-days-selection"
+                class="uppercase text-left md:text-sm text-xs text-gray-700 font-semibold"
               >
-                <label
-                  for="filter-days-selection"
-                  class="uppercase text-left md:text-sm text-xs text-gray-900 text-light font-semibold"
-                >
-                  Selection
-                </label>
-                <select
-                  id="filter-days-selection"
-                  class="py-2 px-3 mx-10 mt-1 rounded-lg border-2 text-gray-500 border-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                >
-                  <option>All days</option>
-                  <option>Weekends only</option>
-                  <option>Weekdays only</option>
-                </select>
-              </div>
+                Selection
+              </label>
+            </div>
 
-              <div
-                class="col-start-1 col-end-4 uppercase text-left md:text-sm text-xs text-gray-900 text-light font-semibold"
+            <div
+              class="col-start-1 col-span-1 row-start-5 row-span-1 uppercase md:text-sm text-xs text-gray-700 font-semibold flex items-center"
+            >
+              Select units
+            </div>
+
+            <!-- INPUTS -->
+            <div class="col-start-2 col-span-2 flex items-center">
+              <input
+                id="start-date"
+                class="w-full py-2 px-3 text-gray-500 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                type="date"
+              />
+            </div>
+
+            <div class="col-start-2 col-span-2 flex justify-start gap-8">
+              <button
+                class="w-1/2 text-purple-500 bg-transparent border border-solid border-purple-500 hover:bg-purple-500 hover:text-white active:bg-purple-600 font-bold uppercase text-xs px-4 py-2 rounded-full outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                type="button"
               >
-                <fieldset>
-                  <div>Select units</div>
-                  <div class="flex flex-nowrap rounded-xl p-2">
-                    <div>
-                      <input
-                        type="radio"
-                        name="option"
-                        id="days"
-                        class="peer hidden"
-                        checked
-                      />
-                      <label
-                        for="days"
-                        class="block cursor-pointer select-none rounded-xl p-2 text-center peer-checked:bg-blue-500 peer-checked:font-bold peer-checked:text-white"
-                        >days
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        type="radio"
-                        name="option"
-                        id="hours"
-                        class="peer hidden"
-                      />
-                      <label
-                        for="hours"
-                        class="block cursor-pointer select-none rounded-xl p-2 text-center peer-checked:bg-blue-500 peer-checked:font-bold peer-checked:text-white"
-                        >hours
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        type="radio"
-                        name="option"
-                        id="minutes"
-                        class="peer hidden"
-                      />
-                      <label
-                        for="minutes"
-                        class="block cursor-pointer select-none rounded-xl p-2 text-center peer-checked:bg-blue-500 peer-checked:font-bold peer-checked:text-white"
-                        >minutes
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        type="radio"
-                        name="option"
-                        id="seconds"
-                        class="peer hidden"
-                        checked
-                      />
-                      <label
-                        for="seconds"
-                        class="block cursor-pointer select-none rounded-xl p-2 text-center peer-checked:bg-blue-500 peer-checked:font-bold peer-checked:text-white"
-                        >seconds
-                      </label>
-                    </div>
+                Week
+              </button>
+              <button
+                class="w-1/2 text-purple-500 bg-transparent border border-solid border-purple-500 hover:bg-purple-500 hover:text-white active:bg-purple-600 font-bold uppercase text-xs px-4 py-2 rounded-full outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                type="button"
+              >
+                Month
+              </button>
+            </div>
+
+            <div class="col-start-2 col-end-4 flex items-center">
+              <input
+                id="end-date"
+                class="w-full py-2 px-3 text-gray-500 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                type="date"
+              />
+            </div>
+
+            <div class="col-start-2 col-span-2 flex items-center">
+              <select
+                id="filter-days-selection"
+                class="w-full py-2 px-3 rounded-lg border-2 text-gray-500 border-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+              >
+                <option>All days</option>
+                <option>Weekends only</option>
+                <option>Weekdays only</option>
+              </select>
+            </div>
+            <div class="col-start-2 col-span-2 flex items-center">
+              <fieldset class="">
+                <div class="w-full flex flex-nowrap rounded-xl">
+                  <div>
+                    <input
+                      type="radio"
+                      name="option"
+                      id="days"
+                      class="peer hidden"
+                      checked
+                    />
+                    <label
+                      for="days"
+                      class="block cursor-pointer select-none rounded-xl p-2 text-center uppercase md:text-sm text-xs text-gray-500 font-semibold peer-checked:bg-blue-500 peer-checked:font-bold peer-checked:text-white"
+                      >days
+                    </label>
                   </div>
-                </fieldset>
-              </div>
+                  <div>
+                    <input
+                      type="radio"
+                      name="option"
+                      id="hours"
+                      class="peer hidden"
+                    />
+                    <label
+                      for="hours"
+                      class="block cursor-pointer select-none rounded-xl p-2 text-center uppercase md:text-sm text-xs text-gray-500 font-semibold peer-checked:bg-blue-500 peer-checked:font-bold peer-checked:text-white"
+                      >hours
+                    </label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      name="option"
+                      id="minutes"
+                      class="peer hidden"
+                    />
+                    <label
+                      for="minutes"
+                      class="block cursor-pointer select-none rounded-xl p-2 text-center uppercase md:text-sm text-xs text-gray-500 font-semibold peer-checked:bg-blue-500 peer-checked:font-bold peer-checked:text-white"
+                      >minutes
+                    </label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      name="option"
+                      id="seconds"
+                      class="peer hidden"
+                    />
+                    <label
+                      for="seconds"
+                      class="block cursor-pointer select-none rounded-xl p-2 text-center uppercase md:text-sm text-xs text-gray-500 font-semibold peer-checked:bg-blue-500 peer-checked:font-bold peer-checked:text-white"
+                      >seconds
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
 
-              <div class="col-start-1 col-end-5">
-                <button
-                  type="submit"
-                  class="uppercase rounded-xl bg-gradient-to-br from-[#6025F5] to-[#FF5555] px-5 py-3 text-base font-medium text-white transition duration-200 hover:shadow-lg hover:shadow-[#6025F5]/50"
-                >
-                  Calculate
-                </button>
-              </div>
+            <div class="col-start-1 col-span-full flex justify-center">
+              <button
+                class="uppercase rounded-xl bg-gradient-to-br from-[#6025F5] to-[#FF5555] px-5 py-3 text-base font-medium text-white transition duration-200 hover:shadow-lg hover:shadow-[#6025F5]/50"
+              >
+                Calculate
+              </button>
             </div>
           </form>
         </div>

@@ -806,6 +806,10 @@ video {
   flex-wrap: nowrap;
 }
 
+.place-items-center {
+  place-items: center;
+}
+
 .items-end {
   align-items: flex-end;
 }
@@ -832,6 +836,10 @@ video {
 
 .justify-stretch {
   justify-content: stretch;
+}
+
+.justify-items-stretch {
+  justify-items: stretch;
 }
 
 .gap-10 {
@@ -868,6 +876,10 @@ video {
 
 .self-center {
   align-self: center;
+}
+
+.justify-self-stretch {
+  justify-self: stretch;
 }
 
 .overflow-hidden {
@@ -1289,6 +1301,10 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.align-baseline {
+  vertical-align: baseline;
 }
 
 .text-6xl {
@@ -1721,6 +1737,10 @@ video {
 
   .md\:h-2\/3 {
     height: 66.666667%;
+  }
+
+  .md\:max-w-screen-md {
+    max-width: 768px;
   }
 
   .md\:grid-cols-4 {

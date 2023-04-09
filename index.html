@@ -10,24 +10,28 @@
   <body>
     <div class="bg-gradient-to-r from-purple-400 to-blue-200">
       <div
-        class="py-12 min-h-screen grid grid-cols-4 justify-around gap-10 px-10"
+        class="py-6 px-6 xl:py-12 xl:px-10 min-h-screen grid grid-cols-1 xl:grid-cols-4 gap-4 xl:gap-10"
       >
         <div
-          class="col-start-1 col-span-3 bg-white shadow overflow-hidden sm:rounded-lg pb-8"
+          class="h-full max-w-screen-lg place-self-center col-start-1 xl:col-span-3 bg-white shadow overflow-hidden rounded-lg pb-8"
         >
           <div class="border-t border-gray-200 text-center pt-8">
-            <h1 class="text-6xl font-bold text-blue-400">
+            <h1 class="text-4xl xl:text-6xl font-bold text-blue-400">
               Time span calculator
             </h1>
-            <p class="text-xl py-8 px-12 font-medium text-gray-500">
+            <p
+              class="text-lg xl:text-xl py-4 xl:py-8 px-12 font-medium text-gray-500"
+            >
               Calculate how many days, hours, minutes or seconds fits into
               selected time period
             </p>
           </div>
-          <form class="grid grid-cols-3 grid-rows-6 mx-8 gap-6">
-            <!-- LABELS -->
+          <form
+            class="grid grid-cols-1 md:grid-cols-3 grid-rows-[auto] mx-8 gap-2 md:gap-8"
+          >
+            <!-- START DATE -->
             <div
-              class="col-start-1 col-span-1 row-start-1 row-span-1 flex items-center"
+              class="mt-4 md:mt-0 md:col-start-1 col-span-1 md:row-start-1 row-span-1 flex items-center"
             >
               <label
                 for="start-date"
@@ -36,9 +40,17 @@
                 Start Date
               </label>
             </div>
+            <div class="md:col-start-2 md:col-span-2 flex items-center">
+              <input
+                id="start-date"
+                class="w-full py-2 px-3 text-gray-500 rounded-lg border-2 border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                type="date"
+              />
+            </div>
 
+            <!-- END DATE -->
             <div
-              class="col-start-1 col-span-1 row-start-3 row-span-1 flex items-center"
+              class="mt-4 md:mt-0 md:col-start-1 col-span-1 md:row-start-2 md:row-span-1 flex items-center"
             >
               <label
                 for="end-date"
@@ -47,9 +59,35 @@
                 End Date
               </label>
             </div>
+            <!-- TIME PERIOD PRESET BUTTONS + END DATE INPUT -->
 
             <div
-              class="col-start-1 col-span-1 row-start-4 row-span-1 flex items-center"
+              class="md:col-start-2 md:col-span-2 md:row-start-2 md:row-span-1 flex flex-col basis-full items-end gap-2"
+            >
+              <div class="flex gap-4 md:gap-8">
+                <button
+                  class="w-1/2 h-8 text-gray-500 bg-transparent border-2 border-solid border-blue-300 hover:border-blue-500 hover:bg-blue-500 focus:bg-blue-500 hover:text-white focus:text-white active:bg-blue-700 font-bold uppercase text-xs px-4 py-0 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150"
+                  type="button"
+                >
+                  Week
+                </button>
+                <button
+                  class="w-1/2 h-8 text-gray-500 bg-transparent border-2 border-solid border-blue-300 hover:border-blue-500 hover:bg-blue-500 focus:bg-blue-500 hover:text-white focus:text-white active:bg-blue-700 font-bold uppercase text-xs px-4 py-0 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150"
+                  type="button"
+                >
+                  Month
+                </button>
+              </div>
+              <input
+                id="end-date"
+                class="w-full py-2 px-3 text-gray-500 rounded-lg border-2 border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                type="date"
+              />
+            </div>
+
+            <!-- DAYS SELECTION -->
+            <div
+              class="mt-4 md:mt-0 md:col-start-1 col-span-1 md:row-start-3 row-span-1 flex items-center"
             >
               <label
                 for="filter-days-selection"
@@ -58,46 +96,7 @@
                 Selection
               </label>
             </div>
-
-            <div
-              class="col-start-1 col-span-1 row-start-5 row-span-1 uppercase md:text-sm text-xs text-gray-700 font-semibold flex items-center"
-            >
-              Select units
-            </div>
-
-            <!-- INPUTS -->
-            <div class="col-start-2 col-span-2 flex items-center">
-              <input
-                id="start-date"
-                class="w-full py-2 px-3 text-gray-500 rounded-lg border-2 border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                type="date"
-              />
-            </div>
-
-            <div class="col-start-2 col-span-2 flex justify-start gap-8">
-              <button
-                class="w-1/2 h-2/3 text-gray-500 bg-transparent border-2 border-solid border-blue-300 hover:border-blue-500 hover:bg-blue-500 focus:bg-blue-500 hover:text-white focus:text-white active:bg-blue-700 font-bold uppercase text-xs px-4 py-0 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150"
-                type="button"
-              >
-                Week
-              </button>
-              <button
-                class="w-1/2 h-2/3 text-gray-500 bg-transparent border-2 border-solid border-blue-300 hover:border-blue-500 hover:bg-blue-500 focus:bg-blue-500 hover:text-white focus:text-white active:bg-blue-700 font-bold uppercase text-xs px-4 py-0 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150"
-                type="button"
-              >
-                Month
-              </button>
-            </div>
-
-            <div class="col-start-2 col-end-4 flex items-center">
-              <input
-                id="end-date"
-                class="w-full py-2 px-3 text-gray-500 rounded-lg border-2 border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                type="date"
-              />
-            </div>
-
-            <div class="col-start-2 col-span-2 flex items-center">
+            <div class="md:col-start-2 md:col-span-2 flex items-center">
               <select
                 id="filter-days-selection"
                 class="w-full py-2 px-3 text-gray-500 rounded-lg border-2 border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -107,8 +106,15 @@
                 <option>Weekdays only</option>
               </select>
             </div>
-            <div class="col-start-2 col-span-2 flex items-center">
-              <fieldset class="">
+
+            <!-- UNITS -->
+            <div
+              class="mt-4 md:mt-0 md:col-start-1 col-span-1 row-span-1 uppercase md:text-sm text-xs text-gray-700 font-semibold flex items-center"
+            >
+              Select units
+            </div>
+            <div class="md:col-start-2 md:col-span-2 flex items-center">
+              <fieldset class="my-1">
                 <div class="w-full flex flex-nowrap rounded-xl">
                   <div>
                     <input
@@ -167,7 +173,9 @@
               </fieldset>
             </div>
 
-            <div class="col-start-1 col-span-full flex justify-center">
+            <div
+              class="my-4 md:mt-0 md:col-start-1 md:col-span-full flex justify-center"
+            >
               <button
                 class="uppercase rounded-xl bg-gradient-to-br from-blue-500 to-purple-500 px-5 py-3 text-base font-medium text-white transition duration-200 hover:shadow-lg hover:shadow-[#6025F5]/50"
               >
@@ -176,13 +184,15 @@
             </div>
 
             <div
-              class="col-start-1 col-span-full flex flex-col h-40 bg-purple-100/10 sm:rounded-lg shadow border border-purple-400"
+              class="md:col-start-1 md:col-span-full flex flex-col h-40 bg-purple-100/10 sm:rounded-lg shadow border border-purple-400"
             >
-              <p class="px-3 py-4 uppercase text-lg text-gray-700 font-bold">
+              <p
+                class="px-3 py-4 uppercase text-base md:text-lg text-gray-700 font-bold"
+              >
                 Result
               </p>
               <p class="self-center px-3 py-1 text-lg text-gray-700">
-                <span class="text-6xl font-bold">19873</span> days
+                <span class="text-4xl md:text-6xl font-bold">19873</span> days
               </p>
             </div>
           </form>
@@ -190,7 +200,7 @@
 
         <!-- ACTIVITY LOG -->
         <div
-          class="col-start-4 col-span-1 flex-1 bg-white rounded-lg shadow-xl py-8 pr-3 pl-6"
+          class="min-w-[768px] xl:min-w-[250px] xl:max-w-screen-md mx-auto col-start-1 xl:col-start-4 flex-1 bg-white rounded-lg shadow-xl py-6 pr-1 pl-3 xl:py-8 xl:pr-3 xl:pl-6"
         >
           <h4 class="text-xl text-gray-700 font-bold">Activity log</h4>
           <div class="relative px-4">
@@ -203,7 +213,7 @@
               <div class="w-1/12 z-10">
                 <div class="w-3.5 h-3.5 bg-purple-400 rounded-full"></div>
               </div>
-              <div class="w-11/12">
+              <div class="w-11/12 xl:pl-2">
                 <p class="text-sm text-gray-600 font-semibold">873 days</p>
                 <p class="text-xs text-gray-700">03.02.19 - 10.05.23</p>
               </div>
@@ -215,7 +225,7 @@
               <div class="w-1/12 z-10">
                 <div class="w-3.5 h-3.5 bg-purple-400 rounded-full"></div>
               </div>
-              <div class="w-11/12">
+              <div class="w-11/12 xl:pl-2">
                 <p class="text-sm text-gray-600 font-semibold">
                   459873 seconds
                 </p>

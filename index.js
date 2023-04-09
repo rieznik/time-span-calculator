@@ -1,5 +1,8 @@
-formListener((inputData) => {
-  const result = calculateTime(inputData);
-  showResult();
-  updateLog();
+import { formSubmitListener } from './js/formSubmitListener.js';
+import { showResult } from './js/showResult.js';
+
+formSubmitListener((inputData) => {
+  const result = inputData; // calculateTime(inputData);
+  showResult(result);
+  // updateLog();
 });

@@ -4,6 +4,6 @@ import { calculateDuration } from './js/calculateDuration.js';
 
 formSubmitListener((inputData) => {
   const result = calculateDuration(inputData);
-  showResult(result);
+  showResult(result, inputData.units);
   // updateLog();
 });

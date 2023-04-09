@@ -1,13 +1,5 @@
-const LS_LOG_KEY = 'activityLog';
-
-const setActivityLog = (logEntry) => {
-  const activityLog = JSON.parse(localStorage.getItem(LS_LOG_KEY)) || [];
-
-  activityLog.push(logEntry);
-  if (activityLog.length > 10) activityLog.shift();
-
-  localStorage.setItem(LS_LOG_KEY, JSON.stringify(activityLog));
-};
+import { getActivityLog, setActivityLog } from './ls.js';
+import { renderActivityLog } from './renderActivityLog.js';
 
 export const updateLog = (result, units, startDate, endDate) => {
   const logEntry = {
@@ -17,6 +9,5 @@ export const updateLog = (result, units, startDate, endDate) => {
     endDate,
   };
   setActivityLog(logEntry);
-  // getActivityLog();
-  // renderActivityLog();
+  renderActivityLog(getActivityLog());
 };

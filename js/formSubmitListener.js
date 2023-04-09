@@ -2,7 +2,7 @@ const formElement = document.getElementById('calc-form');
 const startDateElem = document.getElementById('start-date');
 const endDateElem = document.getElementById('end-date');
 const daysSelection = document.getElementById('filter-days-selection');
-const unitsElements = document.querySelectorAll('fieldset [type="radio"]');
+const unitsElements = document.querySelectorAll('#units [type="radio"]');
 
 const getUnits = (elsSet) => {
   const checked = Array.from(elsSet).filter((radio) => radio.checked);

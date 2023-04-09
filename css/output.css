@@ -800,6 +800,10 @@ video {
   background-image: url('./img/no-data.svg');
 }
 
+.bg-calculator {
+  background-image: url('./img/calculator-animate.svg');
+}
+
 .from-blue-500 {
   --tw-gradient-from: #3b82f6 var(--tw-gradient-from-position);
   --tw-gradient-from-position:  ;

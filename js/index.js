@@ -3,9 +3,14 @@ import { showResult } from './showResult.js';
 import { calculateDuration } from './calculateDuration.js';
 import { getActivityLog, setActivityLog } from './ls.js';
 import { renderActivityLog } from './renderActivityLog.js';
+import { timePresetButtonsListener } from './timePresetButtonsListener.js';
 
 const startApp = () => {
   renderActivityLog(getActivityLog());
+
+  timePresetButtonsListener(() => {
+    console.log('click');
+  });
 
   formSubmitListener((inputData) => {
     const result = calculateDuration(inputData);

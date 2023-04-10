@@ -35,5 +35,5 @@ export const calculateDuration = (inputData) => {
       inputData.endDate,
       inputData.daysSelection
     ) * unitMultipliers[inputData.units]
-  ).toFixed();
+  ).toLocaleString();
 };

@@ -4,14 +4,23 @@ import { calculateDuration } from './calculateDuration.js';
 import { getActivityLog, setActivityLog } from './ls.js';
 import { renderActivityLog } from './renderActivityLog.js';
 import { timePresetButtonsListener } from './timePresetButtonsListener.js';
-import { setEndDateInput, setStartDateInput } from './setDateInput.js';
+import { dateInputChangeListener } from './dateInputChangeListener.js';
+import {
+  updateEndDateInput,
+  updateStartDateMax,
+  updateEndDateMin,
+} from './updateDateInput.js';
 
 const startApp = () => {
   renderActivityLog(getActivityLog());
-  setStartDateInput(new Date());
+
+  dateInputChangeListener((id, value) => {
+    if (id === 'end-date') updateStartDateMax(value);
+    if (id === 'start-date') updateEndDateMin(value);
+  });
 
   timePresetButtonsListener((timespan) => {
-    setEndDateInput(timespan);
+    updateEndDateInput(timespan);
   });
 
   formSubmitListener((inputData) => {

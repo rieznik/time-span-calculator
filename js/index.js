@@ -4,12 +4,13 @@ import { calculateDuration } from './calculateDuration.js';
 import { getActivityLog, setActivityLog } from './ls.js';
 import { renderActivityLog } from './renderActivityLog.js';
 import { timePresetButtonsListener } from './timePresetButtonsListener.js';
+import { setEndDate } from './setEndDate.js';
 
 const startApp = () => {
   renderActivityLog(getActivityLog());
 
-  timePresetButtonsListener(() => {
-    console.log('click');
+  timePresetButtonsListener((timespan) => {
+    setEndDate(timespan);
   });
 
   formSubmitListener((inputData) => {

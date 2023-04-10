@@ -9,7 +9,7 @@ const addWeek = (startDate) =>
 const addMonth = (startDate) =>
   formatDate(new Date(startDate.setMonth(startDate.getMonth() + 1)));
 
-export const setEndDate = (timespan) => {
+export const setEndDateInput = (timespan) => {
   const startDate = new Date(startDateElem.value);
 
   const endDateSetters = {
@@ -22,4 +22,8 @@ export const setEndDate = (timespan) => {
   };
 
   endDateSetters[timespan]();
+};
+
+export const setStartDateInput = (date) => {
+  startDateElem.value = formatDate(date);
 };

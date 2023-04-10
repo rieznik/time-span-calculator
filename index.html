@@ -69,24 +69,27 @@
               <div id="timespan-presets" class="flex gap-4 md:gap-8">
                 <button
                   data-timespan="week"
-                  class="w-1/2 h-8 text-gray-500 bg-transparent border-2 border-solid border-blue-300 hover:border-blue-500 hover:bg-blue-500 focus:bg-blue-500 hover:text-white focus:text-white active:bg-blue-700 font-bold uppercase text-xs px-4 py-0 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150"
+                  class="w-1/2 h-8 text-gray-500 bg-transparent border-2 border-solid border-blue-300 enabled:hover:border-blue-500 enabled:hover:bg-blue-500 focus:bg-blue-500 enabled:hover:text-white focus:text-white font-bold uppercase text-xs px-4 py-0 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150 disabled:bg-gray-200 disabled:border-gray-300"
                   type="button"
+                  disabled
                 >
                   Week
                 </button>
                 <button
                   data-timespan="month"
-                  class="w-1/2 h-8 text-gray-500 bg-transparent border-2 border-solid border-blue-300 hover:border-blue-500 hover:bg-blue-500 focus:bg-blue-500 hover:text-white focus:text-white active:bg-blue-700 font-bold uppercase text-xs px-4 py-0 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150"
+                  class="w-1/2 h-8 text-gray-500 bg-transparent border-2 border-solid border-blue-300 enabled:hover:border-blue-500 enabled:hover:bg-blue-500 focus:bg-blue-500 enabled:hover:text-white focus:text-white font-bold uppercase text-xs px-4 py-0 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150 disabled:bg-gray-200 disabled:border-gray-300"
                   type="button"
+                  disabled
                 >
                   Month
                 </button>
               </div>
               <input
                 id="end-date"
-                class="w-full py-2 px-3 text-gray-500 rounded-lg border-2 border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="w-full py-2 px-3 text-gray-500 rounded-lg border-2 border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-200 disabled:border-gray-300"
                 type="date"
                 required
+                disabled
               />
             </div>
 

@@ -15,8 +15,8 @@ const startApp = () => {
   renderActivityLog(getActivityLog());
 
   dateInputChangeListener((id, value) => {
-    if (id === 'end-date') updateStartDateMax(value);
     if (id === 'start-date') updateEndDateMin(value);
+    if (id === 'end-date') updateStartDateMax(value);
   });
 
   timePresetButtonsListener((timespan) => {

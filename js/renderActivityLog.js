@@ -8,6 +8,8 @@ dashLineElement.setAttribute(
 );
 
 export const renderActivityLog = (log) => {
+  logEntriesContainerElement.innerHTML = '';
+
   if (!log) {
     logEntriesContainerElement.classList.add('bg-no-data', 'min-h-[250px]');
     return;

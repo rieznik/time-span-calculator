@@ -1,2 +1,5 @@
 # time-span-calculator
-Calculate days, hours, minutes or seconds between two dates.
+
+Calculates days, hours, minutes or seconds between two dates.
+
+### 🌐 [Time span calculator](https://rieznik.github.io/time-span-calculator/)

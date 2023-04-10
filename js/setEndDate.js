@@ -1,18 +1,25 @@
 const startDateElem = document.getElementById('start-date');
 const endDateElem = document.getElementById('end-date');
 
+const formatDate = (date) => date.toISOString().split('T')[0];
+
+const addWeek = (startDate) =>
+  formatDate(new Date(startDate.setDate(startDate.getDate() + 7)));
+
+const addMonth = (startDate) =>
+  formatDate(new Date(startDate.setMonth(startDate.getMonth() + 1)));
+
 export const setEndDate = (timespan) => {
   const startDate = new Date(startDateElem.value);
 
-  if (timespan === 'week') {
-    const endDate = new Date(startDate.setDate(startDate.getDate() + 7));
-    const formattedValue = endDate.toISOString().split('T');
-    endDateElem.value = formattedValue[0];
-  }
+  const endDateSetters = {
+    week: () => {
+      endDateElem.value = addWeek(startDate);
+    },
+    month: () => {
+      endDateElem.value = addMonth(startDate);
+    },
+  };
 
-  if (timespan === 'month') {
-    const endDate = new Date(startDate.setMonth(startDate.getMonth() + 1));
-    const formattedValue = endDate.toISOString().split('T');
-    endDateElem.value = formattedValue[0];
-  }
+  endDateSetters[timespan]();
 };

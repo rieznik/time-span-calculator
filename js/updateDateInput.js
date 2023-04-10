@@ -20,7 +20,7 @@ export const updateEndDateMin = (minValue) => {
 export const updateEndDateInput = (timespan) => {
   const startDate = new Date(startDateElem.value);
 
-  const endDateSetters = {
+  const endDateValueSetters = {
     week: () => {
       endDateElem.value = addWeek(startDate);
     },
@@ -29,6 +29,6 @@ export const updateEndDateInput = (timespan) => {
     },
   };
 
-  endDateSetters[timespan]();
+  endDateValueSetters[timespan]();
   updateStartDateMax(endDateElem.value);
 };

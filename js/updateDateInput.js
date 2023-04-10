@@ -9,6 +9,14 @@ const addWeek = (startDate) =>
 const addMonth = (startDate) =>
   formatDate(new Date(startDate.setMonth(startDate.getMonth() + 1)));
 
+export const updateStartDateMax = (maxValue) => {
+  startDateElem.setAttribute('max', maxValue);
+};
+
+export const updateEndDateMin = (minValue) => {
+  endDateElem.setAttribute('min', minValue);
+};
+
 export const updateEndDateInput = (timespan) => {
   const startDate = new Date(startDateElem.value);
 
@@ -22,12 +30,5 @@ export const updateEndDateInput = (timespan) => {
   };
 
   endDateSetters[timespan]();
-};
-
-export const updateStartDateMax = (maxValue) => {
-  startDateElem.setAttribute('max', maxValue);
-};
-
-export const updateEndDateMin = (minValue) => {
-  endDateElem.setAttribute('min', minValue);
+  updateStartDateMax(endDateElem.value);
 };

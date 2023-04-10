@@ -25,6 +25,7 @@ const startApp = () => {
 
   formSubmitListener((inputData) => {
     const result = calculateDuration(inputData);
+
     showResult(result, inputData.units);
 
     const logEntry = {

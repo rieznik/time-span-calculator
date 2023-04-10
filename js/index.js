@@ -5,6 +5,8 @@ import { getActivityLog, setActivityLog } from './ls.js';
 import { renderActivityLog } from './renderActivityLog.js';
 
 const startApp = () => {
+  renderActivityLog(getActivityLog());
+
   formSubmitListener((inputData) => {
     const result = calculateDuration(inputData);
     showResult(result, inputData.units);

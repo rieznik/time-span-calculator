@@ -8,6 +8,13 @@ dashLineElement.setAttribute(
 );
 
 export const renderActivityLog = (log) => {
+  if (!log) {
+    logEntriesContainerElement.classList.add('bg-no-data', 'min-h-[250px]');
+    return;
+  }
+  if (logEntriesContainerElement.classList.contains('bg-no-data'))
+    logEntriesContainerElement.classList.remove('bg-no-data', 'min-h-[250px]');
+
   log.forEach((item) => {
     const startDate = new Date(item.startDate);
     const endDate = new Date(item.endDate);

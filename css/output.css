@@ -536,10 +536,6 @@ video {
   grid-row: span 1 / span 1;
 }
 
-.m-auto {
-  margin: auto;
-}
-
 .mx-8 {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -608,12 +604,36 @@ video {
   height: 100%;
 }
 
-.min-h-\[250px\] {
-  min-height: 250px;
+.min-h-\[500px\] {
+  min-height: 500px;
 }
 
 .min-h-screen {
   min-height: 100vh;
+}
+
+.min-h-\[250px\] {
+  min-height: 250px;
+}
+
+.min-h-\[350px\] {
+  min-height: 350px;
+}
+
+.min-h-\[50\%\] {
+  min-height: 50%;
+}
+
+.min-h-\[30\%\] {
+  min-height: 30%;
+}
+
+.min-h-\[10em\] {
+  min-height: 10em;
+}
+
+.min-h-\[15em\] {
+  min-height: 15em;
 }
 
 .w-1\/12 {
@@ -650,10 +670,6 @@ video {
 
 .basis-full {
   flex-basis: 100%;
-}
-
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .cursor-pointer {
@@ -788,6 +804,10 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-calculator {
+  background-image: url('./img/calculator-animate.svg');
+}
+
 .bg-gradient-to-br {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
@@ -798,10 +818,6 @@ video {
 
 .bg-no-data {
   background-image: url('./img/no-data.svg');
-}
-
-.bg-calculator {
-  background-image: url('./img/calculator-animate.svg');
 }
 
 .from-blue-500 {
@@ -834,8 +850,32 @@ video {
   background-size: auto;
 }
 
+.bg-contain {
+  background-size: contain;
+}
+
+.bg-\[size\:50\%\] {
+  background-size: 50%;
+}
+
+.bg-\[size\:60\%\] {
+  background-size: 60%;
+}
+
+.bg-clip-content {
+  background-clip: content-box;
+}
+
 .bg-center {
   background-position: center;
+}
+
+.bg-bottom {
+  background-position: bottom;
+}
+
+.bg-\[50\%\] {
+  background-position: 50%;
 }
 
 .bg-no-repeat {
@@ -1174,10 +1214,6 @@ video {
     margin-top: 0px;
   }
 
-  .md\:w-full {
-    width: 100%;
-  }
-
   .md\:max-w-screen-md {
     max-width: 768px;
   }
@@ -1246,6 +1282,10 @@ video {
     padding-bottom: 2rem;
   }
 
+  .xl\:pb-96 {
+    padding-bottom: 24rem;
+  }
+
   .xl\:pl-2 {
     padding-left: 0.5rem;
   }
@@ -1256,6 +1296,10 @@ video {
 
   .xl\:pr-3 {
     padding-right: 0.75rem;
+  }
+
+  .xl\:pt-8 {
+    padding-top: 2rem;
   }
 
   .xl\:text-6xl {

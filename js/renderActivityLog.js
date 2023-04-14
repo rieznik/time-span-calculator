@@ -33,10 +33,11 @@ export const renderActivityLog = (log) => {
         <p class="text-sm text-gray-600 font-semibold">
           ${item.result} ${item.units}
         </p>
+        <p class="py-1 text-xs text-gray-700">
+          ${startDate.toLocaleDateString()} - ${endDate.toLocaleDateString()}
+        </p>
         <p class="text-xs text-gray-700">
-          ${startDate.toLocaleDateString()} - ${endDate.toLocaleDateString()} [${
-      item.daysSelection
-    }]
+          Selected days: ${item.daysSelection}
         </p>
       </div>`;
     logEntriesContainerElement.prepend(logEntryWrapper);

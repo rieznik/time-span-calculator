@@ -37,7 +37,7 @@ export const renderActivityLog = (log) => {
           ${startDate.toLocaleDateString()} - ${endDate.toLocaleDateString()}
         </p>
         <p class="text-xs text-gray-700">
-          Selected days: ${item.daysSelection}
+          Selected days: <span class="uppercase">${item.daysSelection}</span>
         </p>
       </div>`;
     logEntriesContainerElement.prepend(logEntryWrapper);

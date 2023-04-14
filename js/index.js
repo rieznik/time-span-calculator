@@ -33,6 +33,7 @@ const startApp = () => {
       units: inputData.units,
       startDate: inputData.startDate,
       endDate: inputData.endDate,
+      daysSelection: inputData.daysSelection,
     };
     setActivityLog(logEntry);
     renderActivityLog(getActivityLog());

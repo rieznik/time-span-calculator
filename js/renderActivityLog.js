@@ -34,7 +34,9 @@ export const renderActivityLog = (log) => {
           ${item.result} ${item.units}
         </p>
         <p class="text-xs text-gray-700">
-          ${startDate.toLocaleDateString()} - ${endDate.toLocaleDateString()}
+          ${startDate.toLocaleDateString()} - ${endDate.toLocaleDateString()} [${
+      item.daysSelection
+    }]
         </p>
       </div>`;
     logEntriesContainerElement.prepend(logEntryWrapper);

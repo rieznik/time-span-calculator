@@ -6,10 +6,10 @@ export const dateInputChangeListener = (cb) => {
   startDateElem.addEventListener('change', (event) => {
     if (endDateElem.hasAttribute('disabled')) {
       endDateElem.removeAttribute('disabled');
-      const timaspanButtonElements = Array.from(
+      const timespanButtonElements = Array.from(
         timespanPresetsElement.children
       );
-      timaspanButtonElements.forEach((el) => el.removeAttribute('disabled'));
+      timespanButtonElements.forEach((el) => el.removeAttribute('disabled'));
     }
     cb(event.target.id, event.target.value);
   });
